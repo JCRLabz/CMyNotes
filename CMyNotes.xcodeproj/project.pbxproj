@@ -7,16 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		517C8DD81FB563DA009E35D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DD71FB563DA009E35D8 /* AppDelegate.m */; };
-		517C8DDB1FB563DA009E35D8 /* CMyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DD91FB563DA009E35D8 /* CMyNotes.xcdatamodeld */; };
-		517C8DDE1FB563DA009E35D8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DDD1FB563DA009E35D8 /* MasterViewController.m */; };
-		517C8DE11FB563DA009E35D8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DE01FB563DA009E35D8 /* DetailViewController.m */; };
-		517C8DE41FB563DA009E35D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517C8DE21FB563DA009E35D8 /* Main.storyboard */; };
-		517C8DE61FB563DA009E35D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517C8DE51FB563DA009E35D8 /* Assets.xcassets */; };
-		517C8DE91FB563DA009E35D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517C8DE71FB563DA009E35D8 /* LaunchScreen.storyboard */; };
-		517C8DEC1FB563DA009E35D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DEB1FB563DA009E35D8 /* main.m */; };
-		517C8DF61FB563DA009E35D8 /* CMyNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8DF51FB563DA009E35D8 /* CMyNotesTests.m */; };
-		517C8E011FB563DA009E35D8 /* CMyNotesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E001FB563DA009E35D8 /* CMyNotesUITests.m */; };
+		516F77EA1FB5AAE900EA44C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516F77E91FB5AAE900EA44C8 /* Images.xcassets */; };
+		516F77EE1FB5D6F800EA44C8 /* iPhoneX.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */; };
+		516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */; };
+		516F77F21FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77F11FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png */; };
+		516F77F41FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77F31FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png */; };
+		517C8E5F1FB564A2009E35D8 /* FontPropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E0E1FB56494009E35D8 /* FontPropertiesViewController.m */; };
+		517C8E611FB564A2009E35D8 /* CellViewForPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E101FB56494009E35D8 /* CellViewForPDF.m */; };
+		517C8E621FB564A2009E35D8 /* TextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E111FB56494009E35D8 /* TextEditor.m */; };
+		517C8E641FB564A2009E35D8 /* WORDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E141FB56495009E35D8 /* WORDController.m */; };
+		517C8E651FB564A2009E35D8 /* SSO4CC in Resources */ = {isa = PBXBuildFile; fileRef = 517C8E151FB56495009E35D8 /* SSO4CC */; };
+		517C8E661FB564A2009E35D8 /* XLSDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E161FB56495009E35D8 /* XLSDrawingView.m */; };
+		517C8E671FB564A2009E35D8 /* UIView+ColorOfPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E181FB56495009E35D8 /* UIView+ColorOfPointView.m */; };
+		517C8E681FB564A2009E35D8 /* ApplicationSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E1A1FB56495009E35D8 /* ApplicationSettingsController.m */; };
+		517C8E691FB564A2009E35D8 /* PPTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E1B1FB56495009E35D8 /* PPTController.m */; };
+		517C8E6A1FB564A2009E35D8 /* ColorToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E1C1FB56495009E35D8 /* ColorToolViewController.m */; };
+		517C8E6B1FB564A2009E35D8 /* JCRPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E1D1FB56495009E35D8 /* JCRPDFView.m */; };
+		517C8E6C1FB564A2009E35D8 /* SSO4CC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E201FB56496009E35D8 /* SSO4CC.xcdatamodeld */; };
+		517C8E6D1FB564A2009E35D8 /* DrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E231FB56496009E35D8 /* DrawingController.m */; };
+		517C8E6E1FB564A2009E35D8 /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E2D1FB56497009E35D8 /* MailViewController.m */; };
+		517C8E701FB564A2009E35D8 /* ImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E311FB56498009E35D8 /* ImageObject.m */; };
+		517C8E711FB564A2009E35D8 /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E331FB56499009E35D8 /* DocumentController.m */; };
+		517C8E721FB564A2009E35D8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E341FB56499009E35D8 /* CollectionViewController.m */; };
+		517C8E731FB564A2009E35D8 /* XLSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E351FB56499009E35D8 /* XLSView.m */; };
+		517C8E751FB564A2009E35D8 /* StorageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E391FB5649A009E35D8 /* StorageController.m */; };
+		517C8E761FB564A2009E35D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E3A1FB5649A009E35D8 /* main.m */; };
+		517C8E771FB564A2009E35D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E3D1FB5649B009E35D8 /* AppDelegate.m */; };
+		517C8E781FB564A2009E35D8 /* XLSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E3E1FB5649C009E35D8 /* XLSController.m */; };
+		517C8E791FB564A2009E35D8 /* ShapeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E3F1FB5649C009E35D8 /* ShapeObject.m */; };
+		517C8E7A1FB564A2009E35D8 /* TextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E421FB5649C009E35D8 /* TextObject.m */; };
+		517C8E7B1FB564A2009E35D8 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E431FB5649D009E35D8 /* Utility.m */; };
+		517C8E7D1FB564A2009E35D8 /* CellViewForXLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E461FB5649D009E35D8 /* CellViewForXLS.m */; };
+		517C8E7F1FB564A2009E35D8 /* PPTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E4B1FB5649E009E35D8 /* PPTView.m */; };
+		517C8E801FB564A2009E35D8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E501FB5649F009E35D8 /* CollectionViewCell.m */; };
+		517C8E811FB564A2009E35D8 /* LibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E511FB5649F009E35D8 /* LibraryCell.m */; };
+		517C8E821FB564A2009E35D8 /* Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E531FB564A0009E35D8 /* Thumbnail.m */; };
+		517C8E831FB564A2009E35D8 /* CMyNotesLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E571FB564A1009E35D8 /* CMyNotesLibraryViewController.m */; };
+		517C8E851FB564A2009E35D8 /* ShapesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E591FB564A1009E35D8 /* ShapesViewController.m */; };
+		517C8E861FB564A2009E35D8 /* PDFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E5B1FB564A1009E35D8 /* PDFController.m */; };
+		517C8E871FB564A2009E35D8 /* ThumbnailCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E5C1FB564A2009E35D8 /* ThumbnailCollectionView.m */; };
+		517C8E881FB564A2009E35D8 /* ToggleControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E5D1FB564A2009E35D8 /* ToggleControlView.m */; };
+		517C8E891FB564A2009E35D8 /* BrushSizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C8E5E1FB564A2009E35D8 /* BrushSizeController.m */; };
+		517C8E8D1FB58133009E35D8 /* UniversalCMyNotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517C8E8C1FB58133009E35D8 /* UniversalCMyNotes.storyboard */; };
+		517C8EB51FB5914C009E35D8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EAB1FB59149009E35D8 /* Default.png */; };
+		517C8EB61FB5914C009E35D8 /* Default640x960@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EAC1FB59149009E35D8 /* Default640x960@2x.png */; };
+		517C8EB71FB5914C009E35D8 /* ColorPalette@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EAD1FB59149009E35D8 /* ColorPalette@2x.png */; };
+		517C8EB81FB5914C009E35D8 /* ColorPalette.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EAE1FB5914A009E35D8 /* ColorPalette.png */; };
+		517C8EB91FB5914C009E35D8 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EAF1FB5914B009E35D8 /* AppIcon@3x.png */; };
+		517C8EBA1FB5914C009E35D8 /* Default750x1334@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EB01FB5914B009E35D8 /* Default750x1334@2x.png */; };
+		517C8EBB1FB5914C009E35D8 /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EB11FB5914B009E35D8 /* Default@3x.png */; };
+		517C8EBC1FB5914C009E35D8 /* Default1248x2208@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EB21FB5914C009E35D8 /* Default1248x2208@3x.png */; };
+		517C8EBD1FB5914C009E35D8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EB31FB5914C009E35D8 /* Default@2x.png */; };
+		517C8EBE1FB5914C009E35D8 /* Default640x1136@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EB41FB5914C009E35D8 /* Default640x1136@2x.png */; };
+		517C8EC91FB59240009E35D8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EBF1FB5923C009E35D8 /* Icon-Small.png */; };
+		517C8ECA1FB59240009E35D8 /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC01FB5923C009E35D8 /* Icon-Small-40@2x.png */; };
+		517C8ECB1FB59240009E35D8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC11FB5923C009E35D8 /* Icon-Small@2x.png */; };
+		517C8ECC1FB59240009E35D8 /* HilighterPen.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC21FB5923D009E35D8 /* HilighterPen.png */; };
+		517C8ECD1FB59240009E35D8 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC31FB5923D009E35D8 /* Icon-76.png */; };
+		517C8ECE1FB59240009E35D8 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC41FB5923E009E35D8 /* Icon-Small-40@3x.png */; };
+		517C8ECF1FB59240009E35D8 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC51FB5923E009E35D8 /* Icon-Small@3x.png */; };
+		517C8ED01FB59240009E35D8 /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC61FB5923E009E35D8 /* Icon-Small-40.png */; };
+		517C8ED11FB59240009E35D8 /* HilighterPen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC71FB5923F009E35D8 /* HilighterPen@2x.png */; };
+		517C8ED21FB59240009E35D8 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8EC81FB5923F009E35D8 /* Icon-76@2x.png */; };
+		517C8ED81FB59299009E35D8 /* PencilForTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED31FB59296009E35D8 /* PencilForTab@2x.png */; };
+		517C8EDA1FB59299009E35D8 /* Pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED51FB59297009E35D8 /* Pencil.png */; };
+		517C8EDB1FB59299009E35D8 /* Pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED61FB59298009E35D8 /* Pencil@2x.png */; };
+		517C8EDC1FB59299009E35D8 /* PencilForTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED71FB59298009E35D8 /* PencilForTab.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,25 +93,113 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		516F77E91FB5AAE900EA44C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneX.png; path = AppImages/iPhoneX.png; sourceTree = SOURCE_ROOT; };
+		516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneiOS56.png; path = AppImages/iPhoneiOS56.png; sourceTree = SOURCE_ROOT; };
+		516F77F11FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadWithOutStatusBar768x1004.png; path = AppImages/iPadWithOutStatusBar768x1004.png; sourceTree = SOURCE_ROOT; };
+		516F77F31FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadWithOutStatusBar768x1004@2x.png"; path = "AppImages/iPadWithOutStatusBar768x1004@2x.png"; sourceTree = SOURCE_ROOT; };
 		517C8DD31FB563DA009E35D8 /* CMyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		517C8DD61FB563DA009E35D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		517C8DD71FB563DA009E35D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		517C8DDA1FB563DA009E35D8 /* CMyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CMyNotes.xcdatamodel; sourceTree = "<group>"; };
-		517C8DDC1FB563DA009E35D8 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		517C8DDD1FB563DA009E35D8 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		517C8DDF1FB563DA009E35D8 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		517C8DE01FB563DA009E35D8 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		517C8DE31FB563DA009E35D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		517C8DE51FB563DA009E35D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		517C8DE81FB563DA009E35D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		517C8DEA1FB563DA009E35D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517C8DEB1FB563DA009E35D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		517C8DF11FB563DA009E35D8 /* CMyNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMyNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		517C8DF51FB563DA009E35D8 /* CMyNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMyNotesTests.m; sourceTree = "<group>"; };
-		517C8DF71FB563DA009E35D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		517C8DFC1FB563DA009E35D8 /* CMyNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMyNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		517C8E001FB563DA009E35D8 /* CMyNotesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMyNotesUITests.m; sourceTree = "<group>"; };
-		517C8E021FB563DA009E35D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		517C8E0E1FB56494009E35D8 /* FontPropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontPropertiesViewController.m; sourceTree = "<group>"; };
+		517C8E0F1FB56494009E35D8 /* CMyNotes-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CMyNotes-Info.plist"; sourceTree = "<group>"; };
+		517C8E101FB56494009E35D8 /* CellViewForPDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellViewForPDF.m; sourceTree = "<group>"; };
+		517C8E111FB56494009E35D8 /* TextEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditor.m; sourceTree = "<group>"; };
+		517C8E131FB56495009E35D8 /* FontPropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontPropertiesViewController.h; sourceTree = "<group>"; };
+		517C8E141FB56495009E35D8 /* WORDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WORDController.m; sourceTree = "<group>"; };
+		517C8E151FB56495009E35D8 /* SSO4CC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SSO4CC; sourceTree = "<group>"; };
+		517C8E161FB56495009E35D8 /* XLSDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSDrawingView.m; sourceTree = "<group>"; };
+		517C8E171FB56495009E35D8 /* JCRPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRPDFView.h; sourceTree = "<group>"; };
+		517C8E181FB56495009E35D8 /* UIView+ColorOfPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPointView.m"; sourceTree = "<group>"; };
+		517C8E191FB56495009E35D8 /* DrawingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingController.h; sourceTree = "<group>"; };
+		517C8E1A1FB56495009E35D8 /* ApplicationSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationSettingsController.m; sourceTree = "<group>"; };
+		517C8E1B1FB56495009E35D8 /* PPTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTController.m; sourceTree = "<group>"; };
+		517C8E1C1FB56495009E35D8 /* ColorToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorToolViewController.m; sourceTree = "<group>"; };
+		517C8E1D1FB56495009E35D8 /* JCRPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRPDFView.m; sourceTree = "<group>"; };
+		517C8E1E1FB56495009E35D8 /* PPTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTView.h; sourceTree = "<group>"; };
+		517C8E1F1FB56496009E35D8 /* ColorToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorToolViewController.h; sourceTree = "<group>"; };
+		517C8E211FB56496009E35D8 /* SSO4CC 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "SSO4CC 2.xcdatamodel"; sourceTree = "<group>"; };
+		517C8E221FB56496009E35D8 /* SSO4CC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SSO4CC.xcdatamodel; sourceTree = "<group>"; };
+		517C8E231FB56496009E35D8 /* DrawingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingController.m; sourceTree = "<group>"; };
+		517C8E241FB56496009E35D8 /* StorageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageController.h; sourceTree = "<group>"; };
+		517C8E251FB56496009E35D8 /* SSO4CC.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SSO4CC.entitlements; sourceTree = "<group>"; };
+		517C8E261FB56496009E35D8 /* MailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailViewController.h; sourceTree = "<group>"; };
+		517C8E281FB56497009E35D8 /* CellViewForXLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellViewForXLS.h; sourceTree = "<group>"; };
+		517C8E291FB56497009E35D8 /* ApplicationSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationSettingsController.h; sourceTree = "<group>"; };
+		517C8E2A1FB56497009E35D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		517C8E2B1FB56497009E35D8 /* CellViewForPDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellViewForPDF.h; sourceTree = "<group>"; };
+		517C8E2C1FB56497009E35D8 /* LibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCell.h; sourceTree = "<group>"; };
+		517C8E2D1FB56497009E35D8 /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
+		517C8E2F1FB56498009E35D8 /* ImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageObject.h; sourceTree = "<group>"; };
+		517C8E301FB56498009E35D8 /* PDFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFController.h; sourceTree = "<group>"; };
+		517C8E311FB56498009E35D8 /* ImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageObject.m; sourceTree = "<group>"; };
+		517C8E321FB56499009E35D8 /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
+		517C8E331FB56499009E35D8 /* DocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentController.m; sourceTree = "<group>"; };
+		517C8E341FB56499009E35D8 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		517C8E351FB56499009E35D8 /* XLSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSView.m; sourceTree = "<group>"; };
+		517C8E361FB56499009E35D8 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		517C8E371FB5649A009E35D8 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		517C8E381FB5649A009E35D8 /* WORDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WORDController.h; sourceTree = "<group>"; };
+		517C8E391FB5649A009E35D8 /* StorageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageController.m; sourceTree = "<group>"; };
+		517C8E3A1FB5649A009E35D8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		517C8E3B1FB5649B009E35D8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		517C8E3C1FB5649B009E35D8 /* CMyNotes-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMyNotes-Prefix.pch"; sourceTree = "<group>"; };
+		517C8E3D1FB5649B009E35D8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		517C8E3E1FB5649C009E35D8 /* XLSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSController.m; sourceTree = "<group>"; };
+		517C8E3F1FB5649C009E35D8 /* ShapeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeObject.m; sourceTree = "<group>"; };
+		517C8E401FB5649C009E35D8 /* XLSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSView.h; sourceTree = "<group>"; };
+		517C8E411FB5649C009E35D8 /* UIView+ColorOfPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPointView.h"; sourceTree = "<group>"; };
+		517C8E421FB5649C009E35D8 /* TextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextObject.m; sourceTree = "<group>"; };
+		517C8E431FB5649D009E35D8 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		517C8E441FB5649D009E35D8 /* ShapeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeObject.h; sourceTree = "<group>"; };
+		517C8E461FB5649D009E35D8 /* CellViewForXLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellViewForXLS.m; sourceTree = "<group>"; };
+		517C8E471FB5649D009E35D8 /* Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thumbnail.h; sourceTree = "<group>"; };
+		517C8E481FB5649E009E35D8 /* XLSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSController.h; sourceTree = "<group>"; };
+		517C8E491FB5649E009E35D8 /* DocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentController.h; sourceTree = "<group>"; };
+		517C8E4B1FB5649E009E35D8 /* PPTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTView.m; sourceTree = "<group>"; };
+		517C8E4C1FB5649E009E35D8 /* XLSDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSDrawingView.h; sourceTree = "<group>"; };
+		517C8E4D1FB5649F009E35D8 /* ThumbnailCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailCollectionView.h; sourceTree = "<group>"; };
+		517C8E4E1FB5649F009E35D8 /* ToggleControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleControlView.h; sourceTree = "<group>"; };
+		517C8E4F1FB5649F009E35D8 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		517C8E501FB5649F009E35D8 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		517C8E511FB5649F009E35D8 /* LibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCell.m; sourceTree = "<group>"; };
+		517C8E521FB564A0009E35D8 /* ShapesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapesViewController.h; sourceTree = "<group>"; };
+		517C8E531FB564A0009E35D8 /* Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thumbnail.m; sourceTree = "<group>"; };
+		517C8E541FB564A0009E35D8 /* BrushSizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushSizeController.h; sourceTree = "<group>"; };
+		517C8E551FB564A0009E35D8 /* CMyNotesLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMyNotesLibraryViewController.h; sourceTree = "<group>"; };
+		517C8E561FB564A1009E35D8 /* PPTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTController.h; sourceTree = "<group>"; };
+		517C8E571FB564A1009E35D8 /* CMyNotesLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMyNotesLibraryViewController.m; sourceTree = "<group>"; };
+		517C8E591FB564A1009E35D8 /* ShapesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapesViewController.m; sourceTree = "<group>"; };
+		517C8E5A1FB564A1009E35D8 /* TextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextObject.h; sourceTree = "<group>"; };
+		517C8E5B1FB564A1009E35D8 /* PDFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFController.m; sourceTree = "<group>"; };
+		517C8E5C1FB564A2009E35D8 /* ThumbnailCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailCollectionView.m; sourceTree = "<group>"; };
+		517C8E5D1FB564A2009E35D8 /* ToggleControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleControlView.m; sourceTree = "<group>"; };
+		517C8E5E1FB564A2009E35D8 /* BrushSizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushSizeController.m; sourceTree = "<group>"; };
+		517C8E8C1FB58133009E35D8 /* UniversalCMyNotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversalCMyNotes.storyboard; sourceTree = "<group>"; };
+		517C8EAB1FB59149009E35D8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		517C8EAC1FB59149009E35D8 /* Default640x960@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default640x960@2x.png"; sourceTree = "<group>"; };
+		517C8EAD1FB59149009E35D8 /* ColorPalette@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ColorPalette@2x.png"; sourceTree = "<group>"; };
+		517C8EAE1FB5914A009E35D8 /* ColorPalette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPalette.png; sourceTree = "<group>"; };
+		517C8EAF1FB5914B009E35D8 /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@3x.png"; sourceTree = "<group>"; };
+		517C8EB01FB5914B009E35D8 /* Default750x1334@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default750x1334@2x.png"; sourceTree = "<group>"; };
+		517C8EB11FB5914B009E35D8 /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
+		517C8EB21FB5914C009E35D8 /* Default1248x2208@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default1248x2208@3x.png"; sourceTree = "<group>"; };
+		517C8EB31FB5914C009E35D8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		517C8EB41FB5914C009E35D8 /* Default640x1136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default640x1136@2x.png"; sourceTree = "<group>"; };
+		517C8EBF1FB5923C009E35D8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		517C8EC01FB5923C009E35D8 /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		517C8EC11FB5923C009E35D8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		517C8EC21FB5923D009E35D8 /* HilighterPen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HilighterPen.png; sourceTree = "<group>"; };
+		517C8EC31FB5923D009E35D8 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		517C8EC41FB5923E009E35D8 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		517C8EC51FB5923E009E35D8 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		517C8EC61FB5923E009E35D8 /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		517C8EC71FB5923F009E35D8 /* HilighterPen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HilighterPen@2x.png"; sourceTree = "<group>"; };
+		517C8EC81FB5923F009E35D8 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		517C8ED31FB59296009E35D8 /* PencilForTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PencilForTab@2x.png"; sourceTree = "<group>"; };
+		517C8ED51FB59297009E35D8 /* Pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pencil.png; sourceTree = "<group>"; };
+		517C8ED61FB59298009E35D8 /* Pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pencil@2x.png"; sourceTree = "<group>"; };
+		517C8ED71FB59298009E35D8 /* PencilForTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PencilForTab.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				517C8DD51FB563DA009E35D8 /* CMyNotes */,
-				517C8DF41FB563DA009E35D8 /* CMyNotesTests */,
-				517C8DFF1FB563DA009E35D8 /* CMyNotesUITests */,
 				517C8DD41FB563DA009E35D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,38 +248,119 @@
 		517C8DD51FB563DA009E35D8 /* CMyNotes */ = {
 			isa = PBXGroup;
 			children = (
-				517C8DD61FB563DA009E35D8 /* AppDelegate.h */,
-				517C8DD71FB563DA009E35D8 /* AppDelegate.m */,
-				517C8DDC1FB563DA009E35D8 /* MasterViewController.h */,
-				517C8DDD1FB563DA009E35D8 /* MasterViewController.m */,
-				517C8DDF1FB563DA009E35D8 /* DetailViewController.h */,
-				517C8DE01FB563DA009E35D8 /* DetailViewController.m */,
-				517C8DE21FB563DA009E35D8 /* Main.storyboard */,
-				517C8DE51FB563DA009E35D8 /* Assets.xcassets */,
-				517C8DE71FB563DA009E35D8 /* LaunchScreen.storyboard */,
-				517C8DEA1FB563DA009E35D8 /* Info.plist */,
-				517C8DEB1FB563DA009E35D8 /* main.m */,
-				517C8DD91FB563DA009E35D8 /* CMyNotes.xcdatamodeld */,
+				517C8E8E1FB58FCF009E35D8 /* Images */,
+				517C8E2A1FB56497009E35D8 /* AppDelegate.h */,
+				517C8E3D1FB5649B009E35D8 /* AppDelegate.m */,
+				517C8E291FB56497009E35D8 /* ApplicationSettingsController.h */,
+				517C8E1A1FB56495009E35D8 /* ApplicationSettingsController.m */,
+				517C8E541FB564A0009E35D8 /* BrushSizeController.h */,
+				517C8E5E1FB564A2009E35D8 /* BrushSizeController.m */,
+				517C8E2B1FB56497009E35D8 /* CellViewForPDF.h */,
+				517C8E101FB56494009E35D8 /* CellViewForPDF.m */,
+				517C8E281FB56497009E35D8 /* CellViewForXLS.h */,
+				517C8E461FB5649D009E35D8 /* CellViewForXLS.m */,
+				517C8E0F1FB56494009E35D8 /* CMyNotes-Info.plist */,
+				517C8E3C1FB5649B009E35D8 /* CMyNotes-Prefix.pch */,
+				517C8E551FB564A0009E35D8 /* CMyNotesLibraryViewController.h */,
+				517C8E571FB564A1009E35D8 /* CMyNotesLibraryViewController.m */,
+				517C8E3B1FB5649B009E35D8 /* CollectionViewCell.h */,
+				517C8E501FB5649F009E35D8 /* CollectionViewCell.m */,
+				517C8E361FB56499009E35D8 /* CollectionViewController.h */,
+				517C8E341FB56499009E35D8 /* CollectionViewController.m */,
+				517C8E1F1FB56496009E35D8 /* ColorToolViewController.h */,
+				517C8E1C1FB56495009E35D8 /* ColorToolViewController.m */,
+				517C8E491FB5649E009E35D8 /* DocumentController.h */,
+				517C8E331FB56499009E35D8 /* DocumentController.m */,
+				517C8E191FB56495009E35D8 /* DrawingController.h */,
+				517C8E231FB56496009E35D8 /* DrawingController.m */,
+				517C8E131FB56495009E35D8 /* FontPropertiesViewController.h */,
+				517C8E0E1FB56494009E35D8 /* FontPropertiesViewController.m */,
+				517C8E2F1FB56498009E35D8 /* ImageObject.h */,
+				517C8E311FB56498009E35D8 /* ImageObject.m */,
+				517C8E371FB5649A009E35D8 /* InfoPlist.strings */,
+				517C8E2C1FB56497009E35D8 /* LibraryCell.h */,
+				517C8E511FB5649F009E35D8 /* LibraryCell.m */,
+				517C8E261FB56496009E35D8 /* MailViewController.h */,
+				517C8E2D1FB56497009E35D8 /* MailViewController.m */,
+				517C8E3A1FB5649A009E35D8 /* main.m */,
+				517C8E8C1FB58133009E35D8 /* UniversalCMyNotes.storyboard */,
+				517C8E301FB56498009E35D8 /* PDFController.h */,
+				517C8E5B1FB564A1009E35D8 /* PDFController.m */,
+				517C8E171FB56495009E35D8 /* JCRPDFView.h */,
+				517C8E1D1FB56495009E35D8 /* JCRPDFView.m */,
+				517C8E561FB564A1009E35D8 /* PPTController.h */,
+				517C8E1B1FB56495009E35D8 /* PPTController.m */,
+				517C8E1E1FB56495009E35D8 /* PPTView.h */,
+				517C8E4B1FB5649E009E35D8 /* PPTView.m */,
+				517C8E441FB5649D009E35D8 /* ShapeObject.h */,
+				517C8E3F1FB5649C009E35D8 /* ShapeObject.m */,
+				517C8E521FB564A0009E35D8 /* ShapesViewController.h */,
+				517C8E591FB564A1009E35D8 /* ShapesViewController.m */,
+				517C8E151FB56495009E35D8 /* SSO4CC */,
+				517C8E251FB56496009E35D8 /* SSO4CC.entitlements */,
+				517C8E201FB56496009E35D8 /* SSO4CC.xcdatamodeld */,
+				517C8E241FB56496009E35D8 /* StorageController.h */,
+				517C8E391FB5649A009E35D8 /* StorageController.m */,
+				517C8E321FB56499009E35D8 /* TextEditor.h */,
+				517C8E111FB56494009E35D8 /* TextEditor.m */,
+				517C8E5A1FB564A1009E35D8 /* TextObject.h */,
+				517C8E421FB5649C009E35D8 /* TextObject.m */,
+				517C8E471FB5649D009E35D8 /* Thumbnail.h */,
+				517C8E531FB564A0009E35D8 /* Thumbnail.m */,
+				517C8E4D1FB5649F009E35D8 /* ThumbnailCollectionView.h */,
+				517C8E5C1FB564A2009E35D8 /* ThumbnailCollectionView.m */,
+				517C8E4E1FB5649F009E35D8 /* ToggleControlView.h */,
+				517C8E5D1FB564A2009E35D8 /* ToggleControlView.m */,
+				517C8E411FB5649C009E35D8 /* UIView+ColorOfPointView.h */,
+				517C8E181FB56495009E35D8 /* UIView+ColorOfPointView.m */,
+				517C8E4F1FB5649F009E35D8 /* Utility.h */,
+				517C8E431FB5649D009E35D8 /* Utility.m */,
+				517C8E381FB5649A009E35D8 /* WORDController.h */,
+				517C8E141FB56495009E35D8 /* WORDController.m */,
+				517C8E481FB5649E009E35D8 /* XLSController.h */,
+				517C8E3E1FB5649C009E35D8 /* XLSController.m */,
+				517C8E4C1FB5649E009E35D8 /* XLSDrawingView.h */,
+				517C8E161FB56495009E35D8 /* XLSDrawingView.m */,
+				517C8E401FB5649C009E35D8 /* XLSView.h */,
+				517C8E351FB56499009E35D8 /* XLSView.m */,
+				516F77E91FB5AAE900EA44C8 /* Images.xcassets */,
 			);
 			path = CMyNotes;
 			sourceTree = "<group>";
 		};
-		517C8DF41FB563DA009E35D8 /* CMyNotesTests */ = {
+		517C8E8E1FB58FCF009E35D8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				517C8DF51FB563DA009E35D8 /* CMyNotesTests.m */,
-				517C8DF71FB563DA009E35D8 /* Info.plist */,
+				516F77F31FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png */,
+				516F77F11FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png */,
+				516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */,
+				516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */,
+				517C8ED51FB59297009E35D8 /* Pencil.png */,
+				517C8ED61FB59298009E35D8 /* Pencil@2x.png */,
+				517C8ED71FB59298009E35D8 /* PencilForTab.png */,
+				517C8ED31FB59296009E35D8 /* PencilForTab@2x.png */,
+				517C8EC21FB5923D009E35D8 /* HilighterPen.png */,
+				517C8EC71FB5923F009E35D8 /* HilighterPen@2x.png */,
+				517C8EC31FB5923D009E35D8 /* Icon-76.png */,
+				517C8EC81FB5923F009E35D8 /* Icon-76@2x.png */,
+				517C8EC61FB5923E009E35D8 /* Icon-Small-40.png */,
+				517C8EC01FB5923C009E35D8 /* Icon-Small-40@2x.png */,
+				517C8EC41FB5923E009E35D8 /* Icon-Small-40@3x.png */,
+				517C8EBF1FB5923C009E35D8 /* Icon-Small.png */,
+				517C8EC11FB5923C009E35D8 /* Icon-Small@2x.png */,
+				517C8EC51FB5923E009E35D8 /* Icon-Small@3x.png */,
+				517C8EAF1FB5914B009E35D8 /* AppIcon@3x.png */,
+				517C8EAE1FB5914A009E35D8 /* ColorPalette.png */,
+				517C8EAD1FB59149009E35D8 /* ColorPalette@2x.png */,
+				517C8EAB1FB59149009E35D8 /* Default.png */,
+				517C8EB31FB5914C009E35D8 /* Default@2x.png */,
+				517C8EB11FB5914B009E35D8 /* Default@3x.png */,
+				517C8EAC1FB59149009E35D8 /* Default640x960@2x.png */,
+				517C8EB41FB5914C009E35D8 /* Default640x1136@2x.png */,
+				517C8EB01FB5914B009E35D8 /* Default750x1334@2x.png */,
+				517C8EB21FB5914C009E35D8 /* Default1248x2208@3x.png */,
 			);
-			path = CMyNotesTests;
-			sourceTree = "<group>";
-		};
-		517C8DFF1FB563DA009E35D8 /* CMyNotesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				517C8E001FB563DA009E35D8 /* CMyNotesUITests.m */,
-				517C8E021FB563DA009E35D8 /* Info.plist */,
-			);
-			path = CMyNotesUITests;
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +469,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C8DE91FB563DA009E35D8 /* LaunchScreen.storyboard in Resources */,
-				517C8DE61FB563DA009E35D8 /* Assets.xcassets in Resources */,
-				517C8DE41FB563DA009E35D8 /* Main.storyboard in Resources */,
+				517C8EBD1FB5914C009E35D8 /* Default@2x.png in Resources */,
+				516F77EA1FB5AAE900EA44C8 /* Images.xcassets in Resources */,
+				517C8ECC1FB59240009E35D8 /* HilighterPen.png in Resources */,
+				517C8EB81FB5914C009E35D8 /* ColorPalette.png in Resources */,
+				517C8ECA1FB59240009E35D8 /* Icon-Small-40@2x.png in Resources */,
+				517C8ED81FB59299009E35D8 /* PencilForTab@2x.png in Resources */,
+				517C8EB91FB5914C009E35D8 /* AppIcon@3x.png in Resources */,
+				517C8ECF1FB59240009E35D8 /* Icon-Small@3x.png in Resources */,
+				517C8E8D1FB58133009E35D8 /* UniversalCMyNotes.storyboard in Resources */,
+				517C8EDB1FB59299009E35D8 /* Pencil@2x.png in Resources */,
+				517C8ECE1FB59240009E35D8 /* Icon-Small-40@3x.png in Resources */,
+				517C8ED21FB59240009E35D8 /* Icon-76@2x.png in Resources */,
+				516F77F41FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png in Resources */,
+				516F77EE1FB5D6F800EA44C8 /* iPhoneX.png in Resources */,
+				517C8EB51FB5914C009E35D8 /* Default.png in Resources */,
+				517C8EBA1FB5914C009E35D8 /* Default750x1334@2x.png in Resources */,
+				517C8ED01FB59240009E35D8 /* Icon-Small-40.png in Resources */,
+				517C8EC91FB59240009E35D8 /* Icon-Small.png in Resources */,
+				517C8EB71FB5914C009E35D8 /* ColorPalette@2x.png in Resources */,
+				517C8EDA1FB59299009E35D8 /* Pencil.png in Resources */,
+				517C8EBE1FB5914C009E35D8 /* Default640x1136@2x.png in Resources */,
+				516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */,
+				517C8ECB1FB59240009E35D8 /* Icon-Small@2x.png in Resources */,
+				517C8E651FB564A2009E35D8 /* SSO4CC in Resources */,
+				517C8ED11FB59240009E35D8 /* HilighterPen@2x.png in Resources */,
+				517C8ECD1FB59240009E35D8 /* Icon-76.png in Resources */,
+				517C8EBC1FB5914C009E35D8 /* Default1248x2208@3x.png in Resources */,
+				517C8EDC1FB59299009E35D8 /* PencilForTab.png in Resources */,
+				517C8EB61FB5914C009E35D8 /* Default640x960@2x.png in Resources */,
+				516F77F21FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png in Resources */,
+				517C8EBB1FB5914C009E35D8 /* Default@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +524,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C8DEC1FB563DA009E35D8 /* main.m in Sources */,
-				517C8DD81FB563DA009E35D8 /* AppDelegate.m in Sources */,
-				517C8DDE1FB563DA009E35D8 /* MasterViewController.m in Sources */,
-				517C8DDB1FB563DA009E35D8 /* CMyNotes.xcdatamodeld in Sources */,
-				517C8DE11FB563DA009E35D8 /* DetailViewController.m in Sources */,
+				517C8E851FB564A2009E35D8 /* ShapesViewController.m in Sources */,
+				517C8E671FB564A2009E35D8 /* UIView+ColorOfPointView.m in Sources */,
+				517C8E751FB564A2009E35D8 /* StorageController.m in Sources */,
+				517C8E7B1FB564A2009E35D8 /* Utility.m in Sources */,
+				517C8E831FB564A2009E35D8 /* CMyNotesLibraryViewController.m in Sources */,
+				517C8E881FB564A2009E35D8 /* ToggleControlView.m in Sources */,
+				517C8E641FB564A2009E35D8 /* WORDController.m in Sources */,
+				517C8E711FB564A2009E35D8 /* DocumentController.m in Sources */,
+				517C8E6C1FB564A2009E35D8 /* SSO4CC.xcdatamodeld in Sources */,
+				517C8E801FB564A2009E35D8 /* CollectionViewCell.m in Sources */,
+				517C8E6D1FB564A2009E35D8 /* DrawingController.m in Sources */,
+				517C8E891FB564A2009E35D8 /* BrushSizeController.m in Sources */,
+				517C8E661FB564A2009E35D8 /* XLSDrawingView.m in Sources */,
+				517C8E7F1FB564A2009E35D8 /* PPTView.m in Sources */,
+				517C8E821FB564A2009E35D8 /* Thumbnail.m in Sources */,
+				517C8E6E1FB564A2009E35D8 /* MailViewController.m in Sources */,
+				517C8E6B1FB564A2009E35D8 /* JCRPDFView.m in Sources */,
+				517C8E691FB564A2009E35D8 /* PPTController.m in Sources */,
+				517C8E761FB564A2009E35D8 /* main.m in Sources */,
+				517C8E7A1FB564A2009E35D8 /* TextObject.m in Sources */,
+				517C8E811FB564A2009E35D8 /* LibraryCell.m in Sources */,
+				517C8E681FB564A2009E35D8 /* ApplicationSettingsController.m in Sources */,
+				517C8E701FB564A2009E35D8 /* ImageObject.m in Sources */,
+				517C8E791FB564A2009E35D8 /* ShapeObject.m in Sources */,
+				517C8E781FB564A2009E35D8 /* XLSController.m in Sources */,
+				517C8E721FB564A2009E35D8 /* CollectionViewController.m in Sources */,
+				517C8E5F1FB564A2009E35D8 /* FontPropertiesViewController.m in Sources */,
+				517C8E621FB564A2009E35D8 /* TextEditor.m in Sources */,
+				517C8E861FB564A2009E35D8 /* PDFController.m in Sources */,
+				517C8E7D1FB564A2009E35D8 /* CellViewForXLS.m in Sources */,
+				517C8E871FB564A2009E35D8 /* ThumbnailCollectionView.m in Sources */,
+				517C8E6A1FB564A2009E35D8 /* ColorToolViewController.m in Sources */,
+				517C8E731FB564A2009E35D8 /* XLSView.m in Sources */,
+				517C8E611FB564A2009E35D8 /* CellViewForPDF.m in Sources */,
+				517C8E771FB564A2009E35D8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +566,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C8DF61FB563DA009E35D8 /* CMyNotesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +573,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C8E011FB563DA009E35D8 /* CMyNotesUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,25 +590,6 @@
 			targetProxy = 517C8DFD1FB563DA009E35D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		517C8DE21FB563DA009E35D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				517C8DE31FB563DA009E35D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		517C8DE71FB563DA009E35D8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				517C8DE81FB563DA009E35D8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		517C8E031FB563DA009E35D8 /* Debug */ = {
@@ -440,10 +700,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CMyNotes/Info.plist;
+				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
+				INFOPLIST_FILE = "$(SRCROOT)/CMyNotes/CMyNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.cmynotes.CMyNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,10 +716,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CMyNotes/Info.plist;
+				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
+				INFOPLIST_FILE = "$(SRCROOT)/CMyNotes/CMyNotes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.cmynotes.CMyNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -558,13 +824,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		517C8DD91FB563DA009E35D8 /* CMyNotes.xcdatamodeld */ = {
+		517C8E201FB56496009E35D8 /* SSO4CC.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				517C8DDA1FB563DA009E35D8 /* CMyNotes.xcdatamodel */,
+				517C8E211FB56496009E35D8 /* SSO4CC 2.xcdatamodel */,
+				517C8E221FB56496009E35D8 /* SSO4CC.xcdatamodel */,
 			);
-			currentVersion = 517C8DDA1FB563DA009E35D8 /* CMyNotes.xcdatamodel */;
-			path = CMyNotes.xcdatamodeld;
+			currentVersion = 517C8E221FB56496009E35D8 /* SSO4CC.xcdatamodel */;
+			path = SSO4CC.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
