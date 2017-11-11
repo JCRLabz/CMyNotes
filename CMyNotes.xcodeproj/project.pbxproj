@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511950A11FB6CC4F0049915D /* CMyNotesHelp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */; };
 		516F77EA1FB5AAE900EA44C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516F77E91FB5AAE900EA44C8 /* Images.xcassets */; };
 		516F77EE1FB5D6F800EA44C8 /* iPhoneX.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */; };
 		516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CMyNotesHelp.pdf; sourceTree = "<group>"; };
 		516F77E91FB5AAE900EA44C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneX.png; path = AppImages/iPhoneX.png; sourceTree = SOURCE_ROOT; };
 		516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneiOS56.png; path = AppImages/iPhoneiOS56.png; sourceTree = SOURCE_ROOT; };
@@ -331,6 +333,7 @@
 		517C8E8E1FB58FCF009E35D8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */,
 				516F77F31FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png */,
 				516F77F11FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png */,
 				516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */,
@@ -488,6 +491,7 @@
 				517C8ED01FB59240009E35D8 /* Icon-Small-40.png in Resources */,
 				517C8EC91FB59240009E35D8 /* Icon-Small.png in Resources */,
 				517C8EB71FB5914C009E35D8 /* ColorPalette@2x.png in Resources */,
+				511950A11FB6CC4F0049915D /* CMyNotesHelp.pdf in Resources */,
 				517C8EDA1FB59299009E35D8 /* Pencil.png in Resources */,
 				517C8EBE1FB5914C009E35D8 /* Default640x1136@2x.png in Resources */,
 				516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */,

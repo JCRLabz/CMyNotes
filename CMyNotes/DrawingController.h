@@ -22,6 +22,7 @@
 #import "PPTView.h"
 #import "WORDController.h"
 #import "FontPropertiesViewController.h"
+#import <WebKit/WebKit.h>
 
 #import "Social/Social.h"
 #import <AssetsLibrary/AssetsLibrary.h>

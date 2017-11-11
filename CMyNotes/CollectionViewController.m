@@ -270,39 +270,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 }
 
-//fix location
-
--(void) loadInMobiAd
-{
-
-}
-
--(void)loadAdMobAd
-{
-
-}
-
-/*
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-
-}
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
-{
-    CLLocation *currentLocation = locations.firstObject;
-
-    if (currentLocation != nil)
-    {
-        [IMSdk setLocation:currentLocation];
-        NSDate *currentDate = [NSDate date];
-        NSTimeInterval secondsElapsed = [currentDate timeIntervalSinceDate:self.adDate];
-        if ( secondsElapsed > 30 || self.adDate == nil) {
-            self.adDate = [NSDate date];
-            [self.nativeAd load];
-        }
-    }
-}
-*/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -1240,6 +1207,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if ( url == nil )
         return FALSE;
 
+    [objectDictionary setObject:trimmedReplacementOfTitle forKey:@"documentTitle"];
     [objectDictionary setObject:[url lastPathComponent] forKey:@"documentName"];
     [objectDictionary setObject:[url absoluteString] forKey:@"documentURL"];
     [objectDictionary setObject:[NSDate date] forKey:@"timestamp"];
@@ -1259,7 +1227,7 @@ static NSString * const reuseIdentifier = @"Cell";
     //NSURL *nsURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((__bridge CFURLRef)url);
     //only one page for this release
-    int count = 2;
+    int count = 10;
 
     for ( int i = 0; i < count; i++ )
     {
@@ -1318,10 +1286,10 @@ static NSString * const reuseIdentifier = @"Cell";
     textStyle.alignment = NSTextAlignmentCenter;
     UIFont *textFont = [UIFont boldSystemFontOfSize:30];
 
-    [@"Notes" drawInRect:rect  withAttributes:@{NSFontAttributeName:textFont, NSParagraphStyleAttributeName:textStyle}];
+    [[dictionary objectForKey:@"documentTitle"] drawInRect:rect  withAttributes:@{NSFontAttributeName:textFont, NSParagraphStyleAttributeName:textStyle}];
 
 
-    rect = CGRectMake(20.0,deviceSize.size.height-100.0, deviceSize.size.width-40,80);
+    rect = CGRectMake(20.0,deviceSize.size.height-40.0, deviceSize.size.width-40,80);
     textStyle.alignment = NSTextAlignmentCenter;
     //textFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 
