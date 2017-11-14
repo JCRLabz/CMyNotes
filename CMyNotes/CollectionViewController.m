@@ -268,7 +268,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.view addSubview:loginButton];*/
     //[self loadInterstitial];
 
-    if ([Utility getLaunchCount] < 4)
+    if ([Utility getLaunchCount] < 10)
     {
         [self LaunchHelpBubble ];
     }

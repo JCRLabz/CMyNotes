@@ -107,9 +107,10 @@ static float _currentFontSize;
 {
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     
-    header.textLabel.textColor = [Utility CMYNColorDarkBlue];
-    header.textLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:16];
-
+    header.textLabel.textColor = [Utility CMYNColorLightYellow];
+    header.textLabel.font = [UIFont fontWithName:@"Helvetica Neue-Bold" size:16];
+    tableView.tintColor = [UIColor lightGrayColor];
+    tableView.layer.backgroundColor = [[UIColor lightGrayColor] CGColor];
     //CGRect headerFrame = header.frame;
     //header.textLabel.frame = headerFrame;
 }

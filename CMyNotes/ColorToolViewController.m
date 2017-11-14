@@ -150,7 +150,6 @@ static float _brushSize = 1.0;
             [self.view.layer addSublayer:layer];
         else
             [self.colorToolView.layer addSublayer:layer];
-        NSLog(@"Layer frame = %@", NSStringFromCGRect(layer.frame));
     }
 }
 
@@ -255,7 +254,15 @@ static float _brushSize = 1.0;
         colorTableOrigin.x = 16.0;
         colorTableOrigin.y = 50.0;
     }
-    CGPoint point = [recognizer locationInView:self.view];
+    CGPoint point;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        point = [recognizer locationInView:self.view];
+    }
+    else
+    {
+        point = [recognizer locationInView:self.colorToolView];
+    }
 
     
     CGRect colorFrame = CGRectMake(colorTableOrigin.x, colorTableOrigin.y, 4*72+4*8, 5*40+5*4); //color grid rectangle..bad code :)

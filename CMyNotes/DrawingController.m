@@ -77,7 +77,7 @@ CGPoint translation;
     [self setupCollectionView];
     [self setupView];
 
-    if ( [Utility getLaunchCount] < 10 )
+    if ( [Utility getLaunchCount] < 4 )
     {
         [self LaunchHelpBubble];
     }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		511C1F7D1FB968620081F6C1 /* ColorPaletteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */; };
 		516F77EA1FB5AAE900EA44C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516F77E91FB5AAE900EA44C8 /* Images.xcassets */; };
 		516F77EE1FB5D6F800EA44C8 /* iPhoneX.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */; };
 		516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */; };
@@ -122,8 +121,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		511C1F7B1FB968620081F6C1 /* ColorPaletteCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPaletteCollectionViewController.h; sourceTree = "<group>"; };
-		511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPaletteCollectionViewController.m; sourceTree = "<group>"; };
 		516F77E91FB5AAE900EA44C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneX.png; path = AppImages/iPhoneX.png; sourceTree = SOURCE_ROOT; };
 		516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneiOS56.png; path = AppImages/iPhoneiOS56.png; sourceTree = SOURCE_ROOT; };
@@ -334,8 +331,6 @@
 				517C8E2D1FB56497009E35D8 /* MailViewController.m */,
 				517C8E3A1FB5649A009E35D8 /* main.m */,
 				517C8E8C1FB58133009E35D8 /* UniversalCMyNotes.storyboard */,
-				511C1F7B1FB968620081F6C1 /* ColorPaletteCollectionViewController.h */,
-				511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */,
 				517C8E301FB56498009E35D8 /* PDFController.h */,
 				517C8E5B1FB564A1009E35D8 /* PDFController.m */,
 				517C8E171FB56495009E35D8 /* JCRPDFView.h */,
@@ -534,7 +529,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -634,7 +629,6 @@
 			files = (
 				517C8E851FB564A2009E35D8 /* ShapesViewController.m in Sources */,
 				517C8E671FB564A2009E35D8 /* UIView+ColorOfPointView.m in Sources */,
-				511C1F7D1FB968620081F6C1 /* ColorPaletteCollectionViewController.m in Sources */,
 				517C8E751FB564A2009E35D8 /* StorageController.m in Sources */,
 				517C8E7B1FB564A2009E35D8 /* Utility.m in Sources */,
 				517C8E831FB564A2009E35D8 /* CMyNotesLibraryViewController.m in Sources */,
@@ -908,7 +902,7 @@
 		51D442441FB9F556002B6357 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = CMyNotesImport/CMyNotesImport.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
 				INFOPLIST_FILE = CMyNotesImport/Info.plist;
@@ -916,6 +910,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes.CMyNotesImport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -924,7 +919,7 @@
 		51D442451FB9F556002B6357 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = CMyNotesImport/CMyNotesImport.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
 				INFOPLIST_FILE = CMyNotesImport/Info.plist;
@@ -932,6 +927,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes.CMyNotesImport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
