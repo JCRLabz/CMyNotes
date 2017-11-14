@@ -66,11 +66,14 @@
     [self setUserInteractionEnabled:YES];
     
     self.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    self.layer.borderWidth = 0.3f;
-    self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.layer.borderWidth = 1.0f;
+    self.layer.borderColor = [[UIColor redColor] CGColor];
+    self.layer.backgroundColor = [[UIColor lightGrayColor] CGColor];
+
     self.dataDetectorTypes = UIDataDetectorTypeAll;
     [self setSelectable:YES];
     [self setEditable:YES];
+
     [self becomeFirstResponder];
     self.pagingEnabled = YES; 
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
@@ -79,7 +82,26 @@
     UIToolbar *tipToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithImage:[self doneImage] style:UIBarButtonItemStylePlain target:self action:@selector(textEntryDone:)];
     done.tintColor = [Utility CMYNColorRed1];
-    
+
+    _closeButton  = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_closeButton setTitle:@"X" forState:UIControlStateNormal];
+    [_closeButton.titleLabel setTextAlignment: NSTextAlignmentLeft];
+    [_closeButton setBackgroundColor:[UIColor blackColor]];
+
+    _closeButton.layer.cornerRadius = 4;
+    _closeButton.frame = CGRectMake(self.bounds.size.width-15,0, 15,15);
+    _closeButton.tintColor =  [UIColor lightGrayColor];
+    _closeButton.layer.borderColor = [[UIColor blueColor] CGColor];
+    _closeButton.layer.borderWidth = 1.0;
+    [_closeButton setNeedsLayout];
+    [_closeButton layoutIfNeeded];
+    [self  setTextContainerInset:UIEdgeInsetsMake(10, 10, 10, 10)];
+    // Add an action in current code file (i.e. target)
+    [_closeButton addTarget:self action:@selector(textEntryDone:)
+     forControlEvents:UIControlEventTouchUpInside];
+
+    //[self addSubview:_closeButton];
+
     tipToolbar.items = [NSArray arrayWithObjects:
 
                         [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ColorPalette"] style:UIBarButtonItemStylePlain target:self action:@selector(changeSelectedTextColor:)],
@@ -99,7 +121,24 @@
     UIBarButtonItem *doneItem = [tipToolbar.items objectAtIndex:7];
     doneItem.tintColor = [Utility CMYNColorRed2];
     [self setInputAccessoryView:tipToolbar];
+    [self addSubview:_closeButton];
+
 }
+
+-(UIImage *)closeButtonimage
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(10,10), NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGContextSetLineWidth(context, 0.2);
+    CGContextMoveToPoint(context, 2, 2);
+    CGContextAddLineToPoint(context, 8, 8);
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 -(UIImage *)leftAlignImage
 {
@@ -408,11 +447,13 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
         
         navigationController.definesPresentationContext = YES; //self is presenting view controller
-        navigationController.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+        navigationController.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.95];
         //navigationController.modalPresentationStyle = UIModalPresentationOverCurrentContext;       //WORKING //now present this navigation controller modally
         navigationController.modalPresentationStyle = UIModalPresentationOverCurrentContext;        //now present this navigation controller modally
         navigationController.navigationBarHidden = YES;
         tabBarController.selectedIndex = 0;
+
+        
         [[[UIApplication sharedApplication]keyWindow].rootViewController presentViewController:navigationController animated:NO completion: nil];
     }
 
@@ -553,8 +594,8 @@
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
-    NSDictionary *keyboardInfo = [notification userInfo];
-    CGSize keyboardSize = [[keyboardInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    //CGSize keyboardSize = [[keyboardInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
 
     CGRect deviceBounds = [Utility deviceBounds];
     frameLocationAtBeginEditing = self.frame;
@@ -567,6 +608,8 @@
     [UIView setAnimationDuration:0.25];
     //self.frame = CGRectMake(5.0,(deviceBounds.size.height-keyboardSize.height)-self.frame.size.height-self.inputAccessoryView.frame.size.height-30.0,self.frame.size.width,self.frame.size.height);
     self.frame = CGRectMake(self.frame.origin.x,(deviceBounds.size.height-keyboardSize.height)-self.frame.size.height-self.inputAccessoryView.frame.size.height-30.0,self.frame.size.width,self.frame.size.height);
+    _closeButton.frame = CGRectMake(self.bounds.size.width-15,0, 15,15);
+    [_closeButton setTitle:@"X" forState:UIControlStateNormal];
     [UIView commitAnimations];
     frameAfterTextChange = self.frame;
     contentSizeAfterTextChange = self.contentSize;

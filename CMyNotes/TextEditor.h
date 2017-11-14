@@ -31,6 +31,8 @@ typedef enum TextEditorButtonTag
     CGFloat keyboardHeight;
 }
 @property (nonatomic, assign) id delegate;
+@property (strong, nonatomic) UIButton *closeButton;
+
 @end
 
 

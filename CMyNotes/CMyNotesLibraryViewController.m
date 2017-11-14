@@ -411,9 +411,8 @@ BOOL addFile = NO;
     }
     //Initialize
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:12.0];
-    NSDictionary *attributesDictionary = @{ NSForegroundColorAttributeName : [Utility CMYNColorDarkBlue]/*[UIColor colorWithRed:0.175f green:0.458f blue:0.831f alpha:1.0f]*/,
-                                            NSFontAttributeName : font};/*,
-                                            NSTextEffectAttributeName : NSTextEffectLetterpressStyle};*/
+    NSDictionary *attributesDictionary = @{ NSForegroundColorAttributeName : [Utility CMYNColorDarkBlue],
+                                            NSFontAttributeName : font};
     
     DocumentType docType = [DrawingController getDocumentType:[object valueForKey:@"documentURL"]];
     cell.nameLabel.attributedText = [[NSMutableAttributedString alloc]  initWithString:[[object valueForKey:@"documentName"] description] attributes:attributesDictionary];

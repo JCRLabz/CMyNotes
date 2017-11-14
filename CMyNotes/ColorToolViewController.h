@@ -37,6 +37,7 @@
 @property (nonatomic, assign) id<ColorToolViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 - (IBAction)closeButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *colorToolView;
 
 @property (strong, nonatomic) NSArray *fontFamilyNames;
 

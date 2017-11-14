@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 #define TOP_BORDER 45
 #define PAGE_NAVIGATION_WIDTH 45
 #define iPad "iPad"
@@ -25,19 +26,18 @@
 //Do NOT disturb any existing order. Add new enum at the end
 typedef enum documentType
 {
-    kPPT, //0
-    kPPTX, //1
-    kDOC, //2
-    kDOCX, //3
-    kPDF,//4
-    kXLS,//5
-    kXLSX,//6
-    kNSData,//7
-    kHTTP,//8
-    kHTTPS,//9
-    kHTML,//10
-    kAd, //11
-    kNone//12
+    kPPT,
+    kPPTX,
+    kDOC,
+    kDOCX,
+    kPDF,
+    kXLS,
+    kXLSX,
+    kNSData,
+    kHTTP,
+    kHTTPS,
+    kHTML,
+    kNone
 } DocumentType;
 
 typedef enum toolbarButtonTag
@@ -143,13 +143,8 @@ typedef enum InstructionType
 +(UIColor *)CMYNColorRed2;
 +(UIColor *)CMYNColorGreen;
 +(UIColor *)CMYNColorRed1;
-+(UIColor *)CMYNColorRed3;
-+(UIColor *)CMYNColorLightYellow;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
-//+ (BOOL)isNetworkAvailable;
-+ (void)setLaunchCount:(BOOL)value forKey:(NSString *)defaultName;
-+ (NSInteger)getLaunchCount;
-
++ (BOOL)isNetworkAvailable;
 
 
 @end

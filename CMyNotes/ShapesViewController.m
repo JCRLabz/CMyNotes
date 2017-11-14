@@ -126,7 +126,7 @@ static uint _currentShape = kLine;
     
     else if ( type == kCircle)
     {
-        CGRect rect = (CGRect){self.circleButton.bounds.origin.x+2,self.circleButton.bounds.origin.y+2,56,56};//self.lineButton.bounds;
+        CGRect rect = (CGRect){self.circleButton.bounds.origin.x+2,self.circleButton.bounds.origin.y+2,55,55};//self.lineButton.bounds;
         bzPath = [UIBezierPath bezierPathWithOvalInRect:rect];
         
         self.circleButton.backgroundColor = [UIColor clearColor];

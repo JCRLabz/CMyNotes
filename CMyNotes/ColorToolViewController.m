@@ -116,18 +116,23 @@ static float _brushSize = 1.0;
     [self setAlphaForSelectedColor];
     
     //for IPAD
+    //for IPAD
     colorCount = 20;
+    CGSize screenSize;
     //get the size of the device
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+         screenSize = [[UIScreen mainScreen] bounds].size;
+    else
+        screenSize = _colorToolView.bounds.size;
     //width of color table
     CGFloat colorTableWidth = 68.0*4+3*6.0;
-    
-    CGPoint colorTableOrigin = CGPointMake((screenSize.width - colorTableWidth)/2.0, 55.0);
+
+    CGPoint colorTableOrigin = CGPointMake((screenSize.width - colorTableWidth)/2.0, 10.0);
     //CGPoint colorTableOrigin = CGPointMake(16.0, 10.0);
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
     {
         colorTableOrigin.x = 16.0;
-        colorTableOrigin.y = 50.0;
+        colorTableOrigin.y = 55.0;
     }
 
     for (int i = 0; i < colorCount && i < _colorTable.count; i++)
@@ -136,12 +141,16 @@ static float _brushSize = 1.0;
         layer.cornerRadius = 6.0;
         UIColor *color = [_colorTable objectAtIndex:i];
         layer.backgroundColor = color.CGColor;
-        
+
         int column = i % 4;
         int row = i / 4;
         layer.frame = CGRectMake(colorTableOrigin.x + (column * 72), colorTableOrigin.y + row * 48, 68, 40);
         [self setupShadow:layer];
-        [self.view.layer addSublayer:layer];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+            [self.view.layer addSublayer:layer];
+        else
+            [self.colorToolView.layer addSublayer:layer];
+        NSLog(@"Layer frame = %@", NSStringFromCGRect(layer.frame));
     }
 }
 
@@ -230,18 +239,24 @@ static float _brushSize = 1.0;
 - (void) colorGridTapped:(UITapGestureRecognizer *)recognizer
 {
     //get the size of the device
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    CGSize screenSize;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        screenSize = [[UIScreen mainScreen] bounds].size;
+    else
+        screenSize = _colorToolView.bounds.size;
+
     //width of color table
     CGFloat colorTableWidth = 68.0*4+3*6.0;
-    
-    CGPoint colorTableOrigin = CGPointMake((screenSize.width - colorTableWidth)/2.0, 55.0);
-    CGPoint point = [recognizer locationInView:self.view];
-    
+    //origin for iPhone
+    CGPoint colorTableOrigin = CGPointMake((screenSize.width - colorTableWidth)/2.0, 10.0);
+    //CGPoint colorTableOrigin = CGPointMake(16.0, 10.0);
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
     {
         colorTableOrigin.x = 16.0;
         colorTableOrigin.y = 50.0;
     }
+    CGPoint point = [recognizer locationInView:self.view];
+
     
     CGRect colorFrame = CGRectMake(colorTableOrigin.x, colorTableOrigin.y, 4*72+4*8, 5*40+5*4); //color grid rectangle..bad code :)
     CGRect sliderFrame = self.brushSizeSlider.frame;
@@ -469,4 +484,8 @@ static float _brushSize = 1.0;
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark - Color palette using CollectionView
+
 @end

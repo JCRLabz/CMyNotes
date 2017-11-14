@@ -12,6 +12,7 @@
 #import <UIKit/UIScreen.h>
 
 
+
 @implementation Utility
 
 -(id)init {
@@ -396,14 +397,6 @@
 {
     return [UIColor colorWithRed:142.0/255.0 green:143.0/255.0 blue:147.0/255.0 alpha:1.0];
 }
-+(UIColor*)CMYNColorLightYellow
-{
-    return [UIColor colorWithRed:254.0/255.0 green:231.0/255.0 blue:195.0/255.0 alpha:1.0];
-}
-+(UIColor*)CMYNColorRed3
-{
-    return [UIColor colorWithRed:247.0/255.0 green:0.0 blue:51.0/255.0 alpha:1.0];
-}
 
 //image from color
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
@@ -421,8 +414,7 @@
     return image;
 }
 
-/*
- + (BOOL)isNetworkAvailable
++ (BOOL)isNetworkAvailable
 {
     CFNetDiagnosticRef dReference;
     dReference = CFNetDiagnosticCreateWithURL (kCFAllocatorDefault, (__bridge CFURLRef)[NSURL URLWithString:@"www.apple.com"]);
@@ -443,24 +435,4 @@
         return NO;
     }
 }
- */
-
-+ (void)setLaunchCount:(BOOL)value forKey:(NSString *)defaultName
-{
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    NSInteger count = [defaults integerForKey:@"LaunchCount"];
-    if ( value )
-        count++;
-    /* Do checks and review prompt */
-    [defaults setInteger:count forKey:@"LaunchCount"];
-    [defaults synchronize];
-}
-
-+ (NSInteger)getLaunchCount
-{
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    NSInteger count = [defaults integerForKey:@"LaunchCount"];
-    return count;
-}
-
 @end

@@ -76,6 +76,11 @@ CGPoint translation;
     self.navigationController.navigationBar.hidden = NO;
     [self setupCollectionView];
     [self setupView];
+
+    if ( [Utility getLaunchCount] < 10 )
+    {
+        [self LaunchHelpBubble];
+    }
 /*
     self.banner = [[IMBanner alloc] initWithFrame:CGRectMake(0, 0, [Utility deviceBounds].size.width, 35) placementId:1466981936192 delegate:self]; //66
 
@@ -104,6 +109,48 @@ CGPoint translation;
     self.banner.delegate = self; */
 
     //[self setupFacebookAd];
+}
+
+-(void)LaunchHelpBubble
+{
+    CGRect rect;
+
+    rect = CGRectMake(0, self.jCRPDFView.frame.size.height/2-25, self.jCRPDFView.frame.size.width, 50);
+
+
+    UITextView *textView = [[UITextView alloc] initWithFrame:rect];
+    textView.backgroundColor = [UIColor yellowColor];
+    textView.textColor = [UIColor blueColor];
+    textView.editable = false;
+    textView.selectable = false;
+    textView.alpha = 0.75;
+    textView.attributedText = [self createBubbleText];
+    textView.layer.cornerRadius = 5;
+    textView.layer.masksToBounds = true;
+    textView.layer.borderWidth = 3;
+    textView.layer.borderColor = [[UIColor blueColor] CGColor];
+    textView.layer.shadowColor = [[UIColor blackColor] CGColor];
+
+    [self.jCRPDFView addSubview:textView];
+
+    [UIView animateWithDuration:5.0 delay:2.0 options:0 animations:^{
+        // Animate the alpha value of your imageView from 1.0 to 0.0 here
+        textView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
+        textView.hidden = YES;
+    }];
+}
+
+-(NSAttributedString *)createBubbleText
+{
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:16.0];
+    NSDictionary *attributesDictionary = @{ NSForegroundColorAttributeName : [Utility CMYNColorDarkBlue],
+                                            NSFontAttributeName : font};
+
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc]  initWithString:[ @"Tap the left, right edge of the screen to navigate to the previous and next page, respectively" description] attributes:attributesDictionary];
+
+    return attributedText;
 }
 
 /*
@@ -2939,7 +2986,7 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    //if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *composeTweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [composeTweet setInitialText:@"Refer to my annotations #CMyNotes"];
@@ -2947,7 +2994,20 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
         UIImage *imageForTwitter = [self getImageWithCMyNotesWatermarkFromView:self.jCRPDFView forFrameSize:self.jCRPDFView.bounds forSocialPage:0];
         
         [composeTweet addImage:imageForTwitter];
-        
+        [composeTweet setCompletionHandler:^(SLComposeViewControllerResult result) {
+
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Tweet Canceled");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Successfully tweeted");
+                    break;
+
+                default:
+                    break;
+            }
+        }];
         //[self presentViewController:composeTweet animated:YES completion:nil];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self presentViewController:composeTweet animated:YES completion:^{
@@ -2955,7 +3015,8 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
         }];
         
     }
-    else
+    /*
+     else
     {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You cannot send a tweet now!!"
                                                                        message:@"Make sure your device has an internet connection and your Twitter account is setup"
@@ -2969,6 +3030,7 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
         
         [self presentViewController:alert animated:YES completion:nil];
     }
+     */
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
@@ -2976,7 +3038,7 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    //if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *composeUpdate4FB = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [composeUpdate4FB setInitialText:@"Refer to my annotations - powered by @CMyNotes"];
@@ -2984,11 +3046,28 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
         UIImage *imageForTwitter = [self getImageWithCMyNotesWatermarkFromView:self.jCRPDFView forFrameSize:self.jCRPDFView.frame forSocialPage:1];
         
         [composeUpdate4FB addImage:imageForTwitter];
+
+        [composeUpdate4FB setCompletionHandler:^(SLComposeViewControllerResult result) {
+
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Post Canceled");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Successfully posted");
+                    break;
+
+                default:
+                    break;
+            }
+        }];
+
         
         [self presentViewController:composeUpdate4FB animated:YES completion:^{
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];}];
     }
-    else
+    /*
+     else
     {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You cannot post this update in your facebook"
                                                                        message:@"Make sure your device is connected to the Internet and your Facebook account is setup"
@@ -3002,7 +3081,7 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
         
         [self presentViewController:alert animated:YES completion:nil];
         
-    }
+    }*/
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
@@ -4349,36 +4428,10 @@ static CGPoint controlPointForPoints(CGPoint p1, CGPoint p2) {
 
 - (void)showShapes:(id)sender
 {
-    //dismiss popover, if  visible
-    /*
-     if ( [self.deleteActionSheet isVisible] )
-     {
-     [self.deleteActionSheet dismissWithClickedButtonIndex:0 animated:YES];
-     }
-     
-     if ( [self.socialActionSheet isVisible] )
-     {
-     [self.socialActionSheet dismissWithClickedButtonIndex:0 animated:YES];
-     }
-     */
+
     if ( ![sender isKindOfClass:[UILongPressGestureRecognizer class]])
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-    {
-        /*
-        if ([self.toolPopoverController isPopoverVisible])
-        {
-            [self.toolPopoverController dismissPopoverAnimated:YES];
-        }
-        
-        if ([self.shapesPopoverController isPopoverVisible])
-        {
-            //[self.shapesPopoverController dismissPopoverAnimated:YES];
-            return;
-        }
-         */
-    }
+
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
     {

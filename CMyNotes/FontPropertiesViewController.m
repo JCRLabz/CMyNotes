@@ -133,7 +133,7 @@ static float _currentFontSize;
         cell.textLabel.attributedText = attributedText;
         
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-        cell.backgroundColor =  [UIColor colorWithRed:254.0 green:231.0 blue:195.0 alpha:1.0];
+        cell.backgroundColor =  [UIColor lightGrayColor];
         cell.contentView.backgroundColor = cell.backgroundColor;
 
         return cell;
@@ -150,7 +150,7 @@ static float _currentFontSize;
         cell.textLabel.attributedText = attributedText;
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.backgroundColor =  [UIColor colorWithRed:254.0 green:231.0 blue:195.0 alpha:1.0];
+        cell.backgroundColor =  [UIColor lightGrayColor];
         cell.contentView.backgroundColor = cell.backgroundColor;
 
         return cell;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		511950A11FB6CC4F0049915D /* CMyNotesHelp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */; };
+		511C1F7D1FB968620081F6C1 /* ColorPaletteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */; };
 		516F77EA1FB5AAE900EA44C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516F77E91FB5AAE900EA44C8 /* Images.xcassets */; };
 		516F77EE1FB5D6F800EA44C8 /* iPhoneX.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */; };
 		516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */ = {isa = PBXBuildFile; fileRef = 516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */; };
@@ -74,6 +74,13 @@
 		517C8EDA1FB59299009E35D8 /* Pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED51FB59297009E35D8 /* Pencil.png */; };
 		517C8EDB1FB59299009E35D8 /* Pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED61FB59298009E35D8 /* Pencil@2x.png */; };
 		517C8EDC1FB59299009E35D8 /* PencilForTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 517C8ED71FB59298009E35D8 /* PencilForTab.png */; };
+		51997B9D1FBAB53600EC5455 /* ShareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 51997B9C1FBAB53600EC5455 /* ShareIcon.png */; };
+		51997B9F1FBAD7F700EC5455 /* CMyNotesHelp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 51997B9E1FBAD7F700EC5455 /* CMyNotesHelp.pdf */; };
+		51D442421FB9F556002B6357 /* CMyNotesImport.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51D442371FB9F556002B6357 /* CMyNotesImport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51D4424D1FB9F595002B6357 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D442481FB9F573002B6357 /* Utility.m */; };
+		51D4424E1FB9F59E002B6357 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D442471FB9F573002B6357 /* MainInterface.storyboard */; };
+		51D4424F1FB9F5A4002B6357 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51D4424B1FB9F573002B6357 /* Info.plist */; };
+		51D442501FB9F5A8002B6357 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D442461FB9F573002B6357 /* ActionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,10 +98,32 @@
 			remoteGlobalIDString = 517C8DD21FB563DA009E35D8;
 			remoteInfo = CMyNotes;
 		};
+		51D442401FB9F556002B6357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 517C8DCB1FB563DA009E35D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51D442361FB9F556002B6357;
+			remoteInfo = CMyNotesImport;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		51C016A01FB9F03C00E899E1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51D442421FB9F556002B6357 /* CMyNotesImport.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CMyNotesHelp.pdf; sourceTree = "<group>"; };
+		511C1F7B1FB968620081F6C1 /* ColorPaletteCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPaletteCollectionViewController.h; sourceTree = "<group>"; };
+		511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPaletteCollectionViewController.m; sourceTree = "<group>"; };
 		516F77E91FB5AAE900EA44C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneX.png; path = AppImages/iPhoneX.png; sourceTree = SOURCE_ROOT; };
 		516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneiOS56.png; path = AppImages/iPhoneiOS56.png; sourceTree = SOURCE_ROOT; };
@@ -202,6 +231,16 @@
 		517C8ED51FB59297009E35D8 /* Pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pencil.png; sourceTree = "<group>"; };
 		517C8ED61FB59298009E35D8 /* Pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pencil@2x.png"; sourceTree = "<group>"; };
 		517C8ED71FB59298009E35D8 /* PencilForTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PencilForTab.png; sourceTree = "<group>"; };
+		51997B9C1FBAB53600EC5455 /* ShareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareIcon.png; sourceTree = "<group>"; };
+		51997B9E1FBAD7F700EC5455 /* CMyNotesHelp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CMyNotesHelp.pdf; sourceTree = "<group>"; };
+		51D442371FB9F556002B6357 /* CMyNotesImport.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CMyNotesImport.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D442461FB9F573002B6357 /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		51D442471FB9F573002B6357 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		51D442481FB9F573002B6357 /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		51D442491FB9F573002B6357 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		51D4424A1FB9F573002B6357 /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		51D4424B1FB9F573002B6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D4424C1FB9F573002B6357 /* CMyNotesImport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CMyNotesImport.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +265,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51D442341FB9F556002B6357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -233,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				517C8DD51FB563DA009E35D8 /* CMyNotes */,
+				51D442381FB9F556002B6357 /* CMyNotesImport */,
 				517C8DD41FB563DA009E35D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -243,6 +290,7 @@
 				517C8DD31FB563DA009E35D8 /* CMyNotes.app */,
 				517C8DF11FB563DA009E35D8 /* CMyNotesTests.xctest */,
 				517C8DFC1FB563DA009E35D8 /* CMyNotesUITests.xctest */,
+				51D442371FB9F556002B6357 /* CMyNotesImport.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +334,8 @@
 				517C8E2D1FB56497009E35D8 /* MailViewController.m */,
 				517C8E3A1FB5649A009E35D8 /* main.m */,
 				517C8E8C1FB58133009E35D8 /* UniversalCMyNotes.storyboard */,
+				511C1F7B1FB968620081F6C1 /* ColorPaletteCollectionViewController.h */,
+				511C1F7C1FB968620081F6C1 /* ColorPaletteCollectionViewController.m */,
 				517C8E301FB56498009E35D8 /* PDFController.h */,
 				517C8E5B1FB564A1009E35D8 /* PDFController.m */,
 				517C8E171FB56495009E35D8 /* JCRPDFView.h */,
@@ -333,9 +383,9 @@
 		517C8E8E1FB58FCF009E35D8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				511950A01FB6CC4F0049915D /* CMyNotesHelp.pdf */,
 				516F77F31FB5E20A00EA44C8 /* iPadWithOutStatusBar768x1004@2x.png */,
 				516F77F11FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png */,
+				51997B9E1FBAD7F700EC5455 /* CMyNotesHelp.pdf */,
 				516F77EF1FB5E05A00EA44C8 /* iPhoneiOS56.png */,
 				516F77ED1FB5D6F700EA44C8 /* iPhoneX.png */,
 				517C8ED51FB59297009E35D8 /* Pencil.png */,
@@ -351,6 +401,7 @@
 				517C8EC41FB5923E009E35D8 /* Icon-Small-40@3x.png */,
 				517C8EBF1FB5923C009E35D8 /* Icon-Small.png */,
 				517C8EC11FB5923C009E35D8 /* Icon-Small@2x.png */,
+				51997B9C1FBAB53600EC5455 /* ShareIcon.png */,
 				517C8EC51FB5923E009E35D8 /* Icon-Small@3x.png */,
 				517C8EAF1FB5914B009E35D8 /* AppIcon@3x.png */,
 				517C8EAE1FB5914A009E35D8 /* ColorPalette.png */,
@@ -366,6 +417,20 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		51D442381FB9F556002B6357 /* CMyNotesImport */ = {
+			isa = PBXGroup;
+			children = (
+				51D4424A1FB9F573002B6357 /* ActionViewController.h */,
+				51D442461FB9F573002B6357 /* ActionViewController.m */,
+				51D4424C1FB9F573002B6357 /* CMyNotesImport.entitlements */,
+				51D4424B1FB9F573002B6357 /* Info.plist */,
+				51D442471FB9F573002B6357 /* MainInterface.storyboard */,
+				51D442491FB9F573002B6357 /* Utility.h */,
+				51D442481FB9F573002B6357 /* Utility.m */,
+			);
+			path = CMyNotesImport;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,10 +441,12 @@
 				517C8DCF1FB563DA009E35D8 /* Sources */,
 				517C8DD01FB563DA009E35D8 /* Frameworks */,
 				517C8DD11FB563DA009E35D8 /* Resources */,
+				51C016A01FB9F03C00E899E1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51D442411FB9F556002B6357 /* PBXTargetDependency */,
 			);
 			name = CMyNotes;
 			productName = CMyNotes;
@@ -422,6 +489,23 @@
 			productReference = 517C8DFC1FB563DA009E35D8 /* CMyNotesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		51D442361FB9F556002B6357 /* CMyNotesImport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51D442431FB9F556002B6357 /* Build configuration list for PBXNativeTarget "CMyNotesImport" */;
+			buildPhases = (
+				51D442331FB9F556002B6357 /* Sources */,
+				51D442341FB9F556002B6357 /* Frameworks */,
+				51D442351FB9F556002B6357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMyNotesImport;
+			productName = CMyNotesImport;
+			productReference = 51D442371FB9F556002B6357 /* CMyNotesImport.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -445,6 +529,15 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 517C8DD21FB563DA009E35D8;
 					};
+					51D442361FB9F556002B6357 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 517C8DCE1FB563DA009E35D8 /* Build configuration list for PBXProject "CMyNotes" */;
@@ -463,6 +556,7 @@
 				517C8DD21FB563DA009E35D8 /* CMyNotes */,
 				517C8DF01FB563DA009E35D8 /* CMyNotesTests */,
 				517C8DFB1FB563DA009E35D8 /* CMyNotesUITests */,
+				51D442361FB9F556002B6357 /* CMyNotesImport */,
 			);
 		};
 /* End PBXProject section */
@@ -489,9 +583,9 @@
 				517C8EB51FB5914C009E35D8 /* Default.png in Resources */,
 				517C8EBA1FB5914C009E35D8 /* Default750x1334@2x.png in Resources */,
 				517C8ED01FB59240009E35D8 /* Icon-Small-40.png in Resources */,
+				51997B9F1FBAD7F700EC5455 /* CMyNotesHelp.pdf in Resources */,
 				517C8EC91FB59240009E35D8 /* Icon-Small.png in Resources */,
 				517C8EB71FB5914C009E35D8 /* ColorPalette@2x.png in Resources */,
-				511950A11FB6CC4F0049915D /* CMyNotesHelp.pdf in Resources */,
 				517C8EDA1FB59299009E35D8 /* Pencil.png in Resources */,
 				517C8EBE1FB5914C009E35D8 /* Default640x1136@2x.png in Resources */,
 				516F77F01FB5E05B00EA44C8 /* iPhoneiOS56.png in Resources */,
@@ -502,6 +596,7 @@
 				517C8EBC1FB5914C009E35D8 /* Default1248x2208@3x.png in Resources */,
 				517C8EDC1FB59299009E35D8 /* PencilForTab.png in Resources */,
 				517C8EB61FB5914C009E35D8 /* Default640x960@2x.png in Resources */,
+				51997B9D1FBAB53600EC5455 /* ShareIcon.png in Resources */,
 				516F77F21FB5E19E00EA44C8 /* iPadWithOutStatusBar768x1004.png in Resources */,
 				517C8EBB1FB5914C009E35D8 /* Default@3x.png in Resources */,
 			);
@@ -521,6 +616,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51D442351FB9F556002B6357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51D4424F1FB9F5A4002B6357 /* Info.plist in Resources */,
+				51D4424E1FB9F59E002B6357 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -530,6 +634,7 @@
 			files = (
 				517C8E851FB564A2009E35D8 /* ShapesViewController.m in Sources */,
 				517C8E671FB564A2009E35D8 /* UIView+ColorOfPointView.m in Sources */,
+				511C1F7D1FB968620081F6C1 /* ColorPaletteCollectionViewController.m in Sources */,
 				517C8E751FB564A2009E35D8 /* StorageController.m in Sources */,
 				517C8E7B1FB564A2009E35D8 /* Utility.m in Sources */,
 				517C8E831FB564A2009E35D8 /* CMyNotesLibraryViewController.m in Sources */,
@@ -580,6 +685,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51D442331FB9F556002B6357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51D442501FB9F5A8002B6357 /* ActionViewController.m in Sources */,
+				51D4424D1FB9F595002B6357 /* Utility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -592,6 +706,11 @@
 			isa = PBXTargetDependency;
 			target = 517C8DD21FB563DA009E35D8 /* CMyNotes */;
 			targetProxy = 517C8DFD1FB563DA009E35D8 /* PBXContainerItemProxy */;
+		};
+		51D442411FB9F556002B6357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51D442361FB9F556002B6357 /* CMyNotesImport */;
+			targetProxy = 51D442401FB9F556002B6357 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -644,7 +763,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -693,7 +812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -708,7 +827,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
 				INFOPLIST_FILE = "$(SRCROOT)/CMyNotes/CMyNotes-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -724,7 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
 				INFOPLIST_FILE = "$(SRCROOT)/CMyNotes/CMyNotes-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -786,6 +905,38 @@
 			};
 			name = Release;
 		};
+		51D442441FB9F556002B6357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CMyNotesImport/CMyNotesImport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
+				INFOPLIST_FILE = CMyNotesImport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes.CMyNotesImport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51D442451FB9F556002B6357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CMyNotesImport/CMyNotesImport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AHQ7PSJXF;
+				INFOPLIST_FILE = CMyNotesImport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jcrlabz.CMyNotes.CMyNotesImport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -821,6 +972,15 @@
 			buildConfigurations = (
 				517C8E0C1FB563DA009E35D8 /* Debug */,
 				517C8E0D1FB563DA009E35D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51D442431FB9F556002B6357 /* Build configuration list for PBXNativeTarget "CMyNotesImport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51D442441FB9F556002B6357 /* Debug */,
+				51D442451FB9F556002B6357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

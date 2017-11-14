@@ -1,4 +1,3 @@
-
 //
 //  CollectionViewController.m
 //  CMyNotes
@@ -13,6 +12,8 @@
 #import "Utility.h"
 @import Foundation;
 #import "StorageController.h"
+
+
 /*
  #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -267,7 +268,50 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.view addSubview:loginButton];*/
     //[self loadInterstitial];
 
+    if ([Utility getLaunchCount] < 4)
+    {
+        [self LaunchHelpBubble ];
+    }
 
+}
+
+-(void)LaunchHelpBubble
+{
+    CGRect rect;
+
+    rect = CGRectMake(self.collectionView.frame.size.width-260, self.navigationController.navigationBar.frame.size.height+
+                      self.navigationController.toolbar.frame.size.height+5, 260, 200);
+
+
+    UITextView *textView = [[UITextView alloc] initWithFrame:rect];
+    textView.backgroundColor = [UIColor yellowColor];
+    textView.textColor = [UIColor blueColor];
+    textView.editable = false;
+    textView.selectable = false;
+    textView.alpha = 0.75;
+    textView.attributedText = [self createBubbleText];
+    [self.view addSubview:textView];
+    [Utility setLaunchCount:true forKey:@"LaunchCount"];
+}
+
+-(NSAttributedString *)createBubbleText
+{
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:16.0];
+    NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
+    textAttachment.image = [UIImage imageNamed:@"ShareIcon.png"];
+
+    [textAttachment setBounds:CGRectMake(5, roundf(font.capHeight - font.lineHeight)/2.f, 10, font.lineHeight)];
+
+    NSAttributedString *attachmentString = [NSAttributedString attributedStringWithAttachment:textAttachment];
+
+    NSDictionary *attributesDictionary = @{ NSForegroundColorAttributeName : [Utility CMYNColorDarkBlue],
+                                            NSFontAttributeName : font};
+
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc]  initWithString:[ @"Use '+' to \n(a) add new PDF file \n(b) import a document (PDF, DOC/DOCX, PPT/PPTX) into CMyNotes from a safe URL.\n\nYou may use the share extension " description] attributes:attributesDictionary];
+    [attributedText appendAttributedString:attachmentString];
+    NSMutableAttributedString *attributedText2 = [[NSMutableAttributedString alloc]  initWithString:[ @" of any other application to import PDF/DOC/DOCX/PPT/PPTX into CMyNotes for annotation" description] attributes:attributesDictionary];
+    [attributedText appendAttributedString:attributedText2];
+    return attributedText;
 }
 
 - (void)didReceiveMemoryWarning
@@ -1060,8 +1104,11 @@ static NSString * const reuseIdentifier = @"Cell";
                                                handler:^(UIAlertAction * action){
                                                    //setUpDocument
 
-                                                   //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-                                                   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+                                                   //
+                                                   if (@available(iOS 10.0, *)) {
+                                                       [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+                                                   } else {
+                                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];                                                   }
 
                                                }];
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
@@ -1207,7 +1254,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if ( url == nil )
         return FALSE;
 
-    [objectDictionary setObject:trimmedReplacementOfTitle forKey:@"documentTitle"];
+    [objectDictionary setObject:title.text forKey:@"documentTitle"];
     [objectDictionary setObject:[url lastPathComponent] forKey:@"documentName"];
     [objectDictionary setObject:[url absoluteString] forKey:@"documentURL"];
     [objectDictionary setObject:[NSDate date] forKey:@"timestamp"];
@@ -1289,13 +1336,13 @@ static NSString * const reuseIdentifier = @"Cell";
     [[dictionary objectForKey:@"documentTitle"] drawInRect:rect  withAttributes:@{NSFontAttributeName:textFont, NSParagraphStyleAttributeName:textStyle}];
 
 
-    rect = CGRectMake(20.0,deviceSize.size.height-40.0, deviceSize.size.width-40,80);
-    textStyle.alignment = NSTextAlignmentCenter;
+    //rect = CGRectMake(20.0,deviceSize.size.height-40.0, deviceSize.size.width-40,80);
+    //textStyle.alignment = NSTextAlignmentCenter;
     //textFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 
-    NSString *timestamp = [NSDateFormatter localizedStringFromDate:[dictionary  valueForKey:@"timestamp"] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
-    NSString *fileDetails = [NSString stringWithFormat:@"File name: %@ \nDate of Creation: %@", [dictionary objectForKey:@"documentName"], timestamp ];
-    [fileDetails drawInRect:rect  withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:8], NSParagraphStyleAttributeName:textStyle, NSForegroundColorAttributeName:[Utility CMYNColorLightBlue]}];
+    //NSString *timestamp = [NSDateFormatter localizedStringFromDate:[dictionary  valueForKey:@"timestamp"] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    //NSString *fileDetails = [NSString stringWithFormat:@"File name: %@ \nDate of Creation: %@", [dictionary objectForKey:@"documentName"], timestamp ];
+    //[fileDetails drawInRect:rect  withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:8], NSParagraphStyleAttributeName:textStyle, NSForegroundColorAttributeName:[Utility CMYNColorLightBlue]}];
 
 
 }
